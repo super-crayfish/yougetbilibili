@@ -10,6 +10,8 @@ https://space.bilibili.com/472422994/video
 测试xpath  开发模式打开，ctrl+shift+alt+x 
 黑色窗口输入
 //*[@id="submit-video-list"]/ul/li/a/@href
+或者
+//*[@id="multi_page"]/div/ul/li/a/@href
 
 取得结果
 //www.bilibili.com/video/BV1tV411v7KE
@@ -28,7 +30,22 @@ https://space.bilibili.com/472422994/video
 @echo off
 cd /d F:/Download
 echo 当前路径是 %cd%
-you-get -o F:/Download https://www.bilibili.com/video/BV1tV411v7KE https://www.bilibili.com/video/BV12h411r7n5
+you-get -o F:/Download https://www.bilibili.com/video/BV1tV411v7KE https://www.bilibili.com/video/BV12h411r7n5        
+
+
+
+
+升级版本
+  升级批量下载 ?p=页码数视频   
+  提交 you-get.bat  文件，需要根据自己需求填写下载视频号
+   
+如下载
+https://www.bilibili.com/video/BV1154y167zA?p=2
+参考 https://blog.csdn.net/COCO56/article/details/106739521
+3.3. 下载一个系列的所有视频
+如果需要把这些视频全部下载，则需要在后面添加--playlist，例如：
+you-get https://www.bilibili.com/video/BV1154y167zA --playlist
+--->BV1154y167zA   这个是视频号 可根据自己的配置
 
 ****************分隔符****************
 这里我选择下载了两个文件都是能正常下载的，
